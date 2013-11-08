@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Generate candidates.txt
+cat votes.csv | \
+    sed "s/,/\n/g" | \
+    sort | \
+    uniq > candidates.txt
+
+# Generate votes.txt
+(
+    nl candidates.txt | \
+        sed -r 's/^ *([0-9]+)\t(.*)/s\/\2\/\1\/g/g'
+) | sed -f /dev/stdin votes.csv | \
+    sed "s/ //g" | \
+    sed "s/,/ /g" > votes.txt
