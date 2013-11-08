@@ -48,11 +48,18 @@
 
         tallies = {};
         voteList.forEach(function (oneSetOfVotes) {
-            if (!tallies[oneSetOfVotes[0]]) {
-                tallies[oneSetOfVotes[0]] = 1;
-            } else {
-                tallies[oneSetOfVotes[0]] += 1;
+            var topVote;
+            topVote = oneSetOfVotes[0];
+
+            if (!topVote) {
+                return;
             }
+
+            if (!tallies[topVote]) {
+                tallies[topVote] = 0;
+            }
+
+            tallies[topVote] += 1;
         });
 
         result = {
@@ -139,13 +146,6 @@
 
         if (!Array.isArray(votes) || !votes.length) {
             console.log('no votes');
-            return;
-        }
-
-        if (!votes.every(function (voteList) {
-                return voteList.length === candidates.length;
-            })) {
-            console.log('invalid vote length');
             return;
         }
 

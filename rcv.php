@@ -30,10 +30,8 @@ function australianVoting($candidates, $votes) {
 		return 'no candidates';
 	}
 
-	$candidateCount = count($candidates);
-
 	foreach ($votes as $v) {
-		if (empty($v) || ! is_array($v) || count($v) != $candidateCount) {
+		if (empty($v) || ! is_array($v)) {
 			return 'no votes';
 		}
 	}
@@ -55,10 +53,15 @@ function calcTallies($votes) {
 	$voteCount = 0;
 
 	foreach ($votes as $voter) {
-		if (empty($tallies[$voter[0]])) {
-			$tallies[$voter[0]] = 0;
-		}
-		$tallies[$voter[0]] ++;
+        if (count($voter) > 0) {
+            $topVote = $voter[0];
+
+            if (empty($tallies[$topVote])) {
+                $tallies[$topVote] = 0;
+            }
+
+            $tallies[$topVote] ++;
+        }
 	}
 
 	$highest = null;
