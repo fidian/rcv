@@ -1,11 +1,5 @@
 This is in response to a posting on the jsmn mailing list.  For fun, the RCV implementation is in PHP and JavaScript.  More languages are welcome!
 
-The Results
-===========
-
-I suspect I am using old data or that my implementation doesn't agree with the city's preliminary results.  My software picked RYB (R.T. Rybak) and the city is proclaiming Betsy Hodges, who doesn't appear to be on my list.  It's possible the "minneapolis" data set is out of date.
-
-You've been warned.  :-)
 
 The Posting
 ===========
