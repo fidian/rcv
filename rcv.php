@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 ini_set('date.timezone', 'CST6CDT');
 error_reporting(E_ALL|E_STRICT);
