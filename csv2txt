@@ -3,13 +3,15 @@
 # Generate candidates.txt
 cat votes.csv | \
     sed "s/,/\n/g" | \
+    sed "/^$/d" | \
     sort | \
     uniq > candidates.txt
 
 # Generate votes.txt
 (
-    nl candidates.txt | \
-        sed -r 's/^ *([0-9]+)\t(.*)/s\/\2\/\1\/g/g'
-) | sed -f /dev/stdin votes.csv | \
+    cat candidates.txt | \
+        nl | \
+        sed -r 's/^ *([0-9]+)\t(.*)/s\/(^|,)\2(,|$)\/\\1\1\\2\/g/g'
+) | sed -r -f /dev/stdin votes.csv | \
     sed "s/ //g" | \
     sed "s/,/ /g" > votes.txt

@@ -1,5 +1,12 @@
 This is in response to a posting on the jsmn mailing list.  For fun, the RCV implementation is in PHP and JavaScript.  More languages are welcome!
 
+The Results
+===========
+
+I suspect I am using old data or that my implementation doesn't agree with the city's preliminary results.  My software picked RYB (R.T. Rybak) and the city is proclaiming Betsy Hodges, who doesn't appear to be on my list.  It's possible the "minneapolis" data set is out of date.
+
+You've been warned.  :-)
+
 The Posting
 ===========
 
@@ -19,6 +26,13 @@ So, here is a fun challenge from Open Twin Cities: be the first person to implem
 Cheers, and have fun,
 Bill Bushey
 Open Twin Cities
+
+
+Minneapolis Links
+=================
+
+* [RCV History](http://vote.minneapolismn.gov/rcv/rcv-history) - Background about the selection of RCV along with data files regarding the election.
+* [Mayor summary statement](http://vote.minneapolismn.gov/results/2013/2013-mayor-tabulation) - Also preliminary XLSX document for results.
 
 
 Other Implementations
