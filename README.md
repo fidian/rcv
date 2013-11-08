@@ -19,3 +19,11 @@ So, here is a fun challenge from Open Twin Cities: be the first person to implem
 Cheers, and have fun,
 Bill Bushey
 Open Twin Cities
+
+
+Other Implementations
+=====================
+
+Other people were spurred by Minneapolis's shameful tabulation of votes using days of work and Excel.
+
+* [cmagnuson/minneapolis-rcv](https://github.com/cmagnuson/minneapolis-rcv)
