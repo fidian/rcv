@@ -4,11 +4,17 @@ error_reporting(E_ALL|E_STRICT);
 ini_set('display_errors', 'on');
 ini_set('display_startup_errors', 'on');
 
+$dirname = $GLOBALS['argv'][1];
 
-$candidates = trim(file_get_contents('candidates.txt'));
+if (empty($dirname)) {
+    echo "Specify directory name on command line\n";
+    exit;
+}
+
+$candidates = trim(file_get_contents($dirname . '/candidates.txt'));
 $candidates = explode("\n", $candidates);
 
-$votes = trim(file_get_contents('votes.txt'));
+$votes = trim(file_get_contents($dirname . '/votes.txt'));
 $votes = explode("\n", $votes);
 
 foreach ($votes as $k => $v) {
@@ -16,7 +22,7 @@ foreach ($votes as $k => $v) {
 }
 
 $winner = australianVoting($candidates, $votes);
-echo var_export($winner, true) . "\n";
+echo $winner . "\n";
 
 function australianVoting($candidates, $votes) {
 	if (empty($candidates) || ! is_array($candidates) || empty($votes) || ! is_array($votes)) {
