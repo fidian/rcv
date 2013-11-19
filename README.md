@@ -27,6 +27,7 @@ Minneapolis Links
 
 * [RCV History](http://vote.minneapolismn.gov/rcv/rcv-history) - Background about the selection of RCV along with data files regarding the election.
 * [Mayor summary statement](http://vote.minneapolismn.gov/results/2013/2013-mayor-tabulation) - Also preliminary XLSX document for results.
+* [Open Twin Cities](http://www.opentwincities.org/2013/11/15/ranked-choice-voting-and-civic-tech-in-minneapolis/) - Blog posting regarding the election
 
 
 Other Implementations
